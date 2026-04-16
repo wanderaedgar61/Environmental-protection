@@ -348,7 +348,7 @@ img:hover {
     line-height: 1.6;
     margin-bottom: 15px;
     color: #555;
-    text-align: justify;      /* makes text flush left & right */
+    text-align: center;      /* makes text flush left & right */
     text-align-last: center;  /* centers the last line */
 }
 
