@@ -352,15 +352,6 @@ img:hover {
     text-align-last: center;  /* centers the last line */
 }
 
-.centered {
-  max-width: 800px;       /* keeps text from stretching too wide */
-  margin: 0 auto;         /* centers the whole block */
-  text-align: justify;    /* aligns text flush left & right */
-  text-align-last: center;  /* keeps last line aligned neatly */
-  line-height: 1.6;
-  color: #555;
-}
-
 .centered video {
   display: block;
   margin: 20px auto;
