@@ -204,3 +204,31 @@ window.addEventListener('scroll', () => {
 
   lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
 });
+
+function openImage(imgElement) {
+    const overlay = document.getElementById("imageOverlay");
+    const overlayImg = document.getElementById("overlayImg");
+    
+    overlayImg.src = imgElement.src;
+    overlay.style.display = "flex";
+    
+    // Prevent the background page from scrolling while image is open
+    document.body.style.overflow = "hidden"; 
+}
+
+function closeImage() {
+    const overlay = document.getElementById("imageOverlay");
+    overlay.style.display = "none";
+    document.body.style.overflow = "auto";
+}
+
+document.getElementById("imageOverlay").addEventListener("click", closeImage);
+
+document.querySelectorAll('.container img').forEach(image => {
+    image.style.cursor = "pointer"; 
+    
+    // It adds the click event automatically
+    image.addEventListener('click', () => {
+        openImage(image);
+    });
+});
