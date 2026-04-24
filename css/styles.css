@@ -348,11 +348,57 @@ img:hover {
     line-height: 1.6;
     margin-bottom: 15px;
     color: #555;
-    text-align: center;      /* makes text flush left & right */
-    text-align-last: center;  /* centers the last line */
+    text-align: justify;      
+    text-align-last: center; 
+}
+
+.centered {
+  max-width: 800px;       
+  margin: 0 auto;         
+  text-align: justify;    
+  text-align-last: center;  
+  line-height: 1.6;
+  color: #555;
 }
 
 .centered video {
   display: block;
   margin: 20px auto;
+}
+
+/* Fullscreen Overlay Styling */
+.overlay {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Dark background */
+    justify-content: center;
+    align-items: center;
+}
+
+#imageOverlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.85);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  cursor: zoom-out;
+}
+
+#overlayImg {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  border: 5px solid white;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  cursor: default;
 }
